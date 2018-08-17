@@ -32,9 +32,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func say(_ text: String) {
         let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+//        utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
         // Siriの音声（シミュレータでは発音不可）
-        //        utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.siri_female_ja-JP_compact")
+        utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.siri_female_ja-JP_compact")
         self.speaker.speak(utterance)
     }
     
